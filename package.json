@@ -1,0 +1,13 @@
+{
+  "name": "cbwire-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./resources/assets/css/stylesheet.css -o ./includes/css/stylesheet.css",
+    "watch": "npx tailwindcss -i ./resources/assets/css/stylesheet.css -o ./includes/css/stylesheet.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.2",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  }
+}
