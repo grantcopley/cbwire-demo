@@ -2,6 +2,8 @@
 
 This is the [cbwire](https://cbwire.ortusbooks.com) demonstration app that was shown for [Into The Box 2021](https://intothebox.org/).
 
+![alt text][logo]
+
 cbwire is a [ColdBox](https://coldbox.org/) module that makes building reactive, dynamic, and modern interfaces delightfully easy without leaving the comfort of CFML.
 ## Core Files
 
@@ -27,8 +29,6 @@ box server start
 ```
 
 Once the application dependencies and server startup complete, your browser should automatically open and you can start tinkering. :)
-
-![alt text][logo]
 
 ## Documentation
 
