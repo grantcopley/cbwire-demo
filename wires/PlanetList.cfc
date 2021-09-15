@@ -3,47 +3,50 @@
  */
 component extends="cbwire.models.Component" {
 
-	property name="planetService" inject="PlanetService";
+    property name="planetService" inject="PlanetService";
 
-	// Data properties
-	variables.data = { "numberOfSatellites" : 0 };
+    // Data properties
+    variables.data = {
+        "satelliteCount": 0,
+        "planets": function(){
+            return planetService.getPlanets();
+        }
+    };
 
-	// Data from injected services need to be placed within onDIComplete().
-	function onDIComplete() {
-		variables.data[ "planets" ] = planetService.getPlanets();
-	}
+    /*
+        // Calls to injected services can also be placed within onDIComplete().
+        function onDIComplete(){
+            variables.data[ "planets" ] = planetService.getPlanets();
+        }
+    */
 
-	// Computed properties
-	variables.computed = {
-		"planetCount" : function() {
-			return arrayLen( variables.data.planets );
-		},
-		"planetsWithSatellites" : function( numberOfSatellites ) {
-			return variables.data.planets.filter( function( planet ) {
-				return planet.satellites >= numberOfSatellites;
-			} );
-		}
-	}
+    // Computed properties
+    variables.computed = {
+        "planetCount" : function(){
+            return arrayLen( variables.data.planets );
+        },
+        "planetsWithSatellites" : function( satelliteCount ){
+            return variables.data.planets.filter( function( planet ){
+                return planet.satellites >= satelliteCount;
+            } );
+        }
+    }
 
-	// Listeners
-	variables.listeners = { "movieYearModified" : "tellEveryone" };
+    // Actions
+    function increaseSatellites(){
+        variables.data.satelliteCount += 1;
+    }
 
-	// Actions
-	function increaseSatellites() {
-		variables.data.numberOfSatellites += 1;
-	}
+    function decreaseSatellites(){
+        variables.data.satelliteCount -= 1;
+    }
 
-	function decreaseSatellites() {
-		variables.data.numberOfSatellites -= 1;
-	}
+    function reset(){
+        variables.data.satelliteCount = 0;
+    }
 
-	function reset() {
-		variables.data.numberOfSatellites = 0;
-	}
-
-	// render the cbwire view
-	function renderIt() {
-		return this.renderView( "wires/planetlist" );
-	}
-
+    // Rendering
+    function renderIt(){
+        return this.renderView( "wires/planetlist" );
+    }
 }
