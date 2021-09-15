@@ -1,4 +1,4 @@
-component singleton{
+component singleton {
 
 	/**
 	 * Returns a list of Milky Way planets.
