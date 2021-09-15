@@ -26,7 +26,7 @@
                             <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
                         </svg>
                     </button>
-                    <button wire:click="reset" type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white <cfif args.satelliteCount eq 0>bg-gray-600<cfelse>bg-indigo-600 hover:bg-indigo-700</cfif> focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <button wire:click="reset" type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white <cfif args.satelliteCount eq 0>bg-gray-600<cfelse>bg-indigo-600 hover:bg-indigo-700</cfif> focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" <cfif args.satelliteCount eq 0>disabled="disabled"</cfif>>
                         Reset
                     </button>
 
