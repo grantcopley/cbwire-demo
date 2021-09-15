@@ -20,7 +20,7 @@ component {
 			// Development Settings
 			reinitPassword           : "",
 			reinitKey                : "fwreinit",
-			handlersIndexAutoReload  : true,
+			handlersIndexAutoReload  : false,
 			// Implicit Events
 			defaultEvent             : "",
 			requestStartHandler      : "Main.onRequestStart",
@@ -45,7 +45,7 @@ component {
 			invalidEventHandler      : "",
 			customErrorTemplate      : "/coldbox/system/exceptions/Whoops.cfm",
 			// Application Aspects
-			handlerCaching           : false,
+			handlerCaching           : true,
 			eventCaching             : false,
 			viewCaching              : false,
 			// Will automatically do a mapDirectory() on your `models` for you.
@@ -141,7 +141,7 @@ component {
 			cbwire = {
 				"throwOnMissingSetterMethod" : false,
 				"componentLocation": "wires"
-			}			
+			}
 		};
 
 		/**
