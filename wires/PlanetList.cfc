@@ -9,7 +9,7 @@ component extends="cbwire.models.Component" {
 	variables.data = {
 		"satelliteCount" : 0,
 		"planets"        : function() {
-			return planetService.getPlanets();
+			return variables.planetService.getPlanets();
 		}
 	};
 
