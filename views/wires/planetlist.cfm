@@ -13,7 +13,7 @@
                     <div class="text-sm">Powered by <a href="https://cbwire.ortusbooks.com" class="text-indigo-600 hover:text-indigo-700">cbwire</a></div>
                 </div>
                 <div class="flex justify-between items-center">
-                    <div class="mr-5">Filter: <span class="font-bold">#args.satelliteCount#</span> Satellites</div>
+                    <div class="mr-5">Filter: <span class="font-bold">#args.satelliteCount#</span> or more Satellites</div>
                     <button wire:click="increaseSatellites" type="button" class="mr-1 inline-flex items-center p-3 border border-transparent rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         <!-- Heroicon name: outline/plus-sm -->
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" aria-hidden="true">
