@@ -13,34 +13,29 @@
  *
  * You can also use the HTTP executables: get(), post(), put(), path(), delete(), request()
  **/
-component extends="cbwire.testing.BaseTestCase" appMapping="|appMapping|"{
+component extends="cbwire.testing.BaseTestCase" appMapping="|appMapping|" {
 
 	/*********************************** LIFE CYCLE Methods ***********************************/
 
-	function beforeAll(){
+	function beforeAll() {
 		super.beforeAll();
 		// do your own stuff here
 	}
 
-	function afterAll(){
+	function afterAll() {
 		// do your own stuff here
 		super.afterAll();
 	}
 
 	/*********************************** BDD SUITES ***********************************/
 
-	function run(){
-
-		describe( "MovieList Suite", function(){
-
-			beforeEach(function( currentSpec ){
+	function run() {
+		describe( "MovieList Suite", function() {
+			beforeEach( function( currentSpec ) {
 				// Setup as a new ColdBox request for this suite, VERY IMPORTANT. ELSE EVERYTHING LOOKS LIKE THE SAME REQUEST.
 				setup();
-			});
-
-
-		});
-
+			} );
+		} );
 	}
 
 }

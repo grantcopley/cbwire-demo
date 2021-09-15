@@ -14,10 +14,7 @@
  *	* eventArguments : The struct of args to pass to the event
  *	* renderResults : Render back the results of the event
  *******************************************************************************/
-component
-	extends   ="coldbox.system.testing.BaseTestCase"
-	appMapping="/root"
-{
+component extends="coldbox.system.testing.BaseTestCase" appMapping="/root" {
 
 	/*********************************** LIFE CYCLE Methods ***********************************/
 
@@ -68,7 +65,8 @@ component
 					extramessage = "My unit test exception",
 					extraInfo    = "Any extra info, simple or complex"
 				);
-				prepareMock( getRequestContext() ).setValue(
+				prepareMock( getRequestContext() )
+					.setValue(
 						name    = "exception",
 						value   = exceptionBean,
 						private = true
