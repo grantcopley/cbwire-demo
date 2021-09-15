@@ -6,9 +6,12 @@
     <div class="pt-12 sm:pt-16">
         <div class="max-w-6xl mx-auto mb-12">
             <div class="flex justify-between mx-auto flex-wrap">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl flex-none">
-                    Milky Way Planets
-                </h2>
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl flex-none">
+                        Milky Way Planets
+                    </h2>
+                    <div class="text-sm">Powered by <a href="https://cbwire.ortusbooks.com" class="text-indigo-600 hover:text-indigo-700">cbwire</a></div>
+                </div>
                 <div class="flex justify-between items-center">
                     <div class="mr-5">Filter: <span class="font-bold">#args.satelliteCount#</span> Satellites</div>
                     <button wire:click="increaseSatellites" type="button" class="mr-1 inline-flex items-center p-3 border border-transparent rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
