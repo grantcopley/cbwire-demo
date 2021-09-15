@@ -23,10 +23,10 @@ component extends="cbwire.models.Component" {
 	// Computed properties
 	variables.computed = {
 		"planetCount" : function() {
-			return arrayLen( variables.data.planets );
+			return arrayLen( variables.data.planets() );
 		},
 		"planetsWithSatellites" : function( satelliteCount ) {
-			return variables.data.planets.filter( function( planet ) {
+			return variables.data.planets().filter( function( planet ) {
 				return planet.satellites >= satelliteCount;
 			} );
 		}
