@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     #wireStyles()#
 </head>
-<body class="">
+<body class="bg-gray-50">
     #wire( "PlanetList" )#
     #wireScripts()#
 </body>

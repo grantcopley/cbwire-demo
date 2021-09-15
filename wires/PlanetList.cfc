@@ -7,7 +7,7 @@ component extends="cbwire.models.Component" {
 
     // Data properties
     variables.data = {
-        "numberOfSatellites": 0
+        "satelliteCount": 0
     };
 
     // Data from injected services need to be placed within onDIComplete().
@@ -20,29 +20,24 @@ component extends="cbwire.models.Component" {
         "planetCount" : function(){
             return arrayLen( variables.data.planets );
         },
-        "planetsWithSatellites" : function( numberOfSatellites ){
+        "planetsWithSatellites" : function( satelliteCount ){
             return variables.data.planets.filter( function( planet ){
-                return planet.satellites >= numberOfSatellites;
+                return planet.satellites >= satelliteCount;
             } );
         }
     }
 
-    // Listeners
-	variables.listeners = {
-		"movieYearModified": "tellEveryone"
-	};
-
     // Actions
     function increaseSatellites(){
-        variables.data.numberOfSatellites += 1;
+        variables.data.satelliteCount += 1;
     }
 
     function decreaseSatellites(){
-        variables.data.numberOfSatellites -= 1;
+        variables.data.satelliteCount -= 1;
     }
 
     function reset(){
-        variables.data.numberOfSatellites = 0;
+        variables.data.satelliteCount = 0;
     }
 
     function renderIt(){
