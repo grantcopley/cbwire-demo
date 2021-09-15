@@ -5,6 +5,10 @@ on:
     branches-ignore:
       - master
       - main
+    # Only run if *.cfc files or this action are modified
+    paths:
+      - '**.cfc'
+      - '.github/workflows/format.yml'
   pull_request:
     branches:
       - main
