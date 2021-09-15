@@ -1,0 +1,31 @@
+name: CFFormat
+
+on:
+  push:
+    branches-ignore:
+      - master
+      - main
+    # Only run if *.cfc files or this action are modified
+    paths:
+      - '**.cfc'
+      - '.github/workflows/format.yml'
+  pull_request:
+    branches:
+      - main
+      - master
+      - development
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: michaelborn/commandbox-action@v1
+        with:
+          cmd: cfformat run path=models,handlers,interceptors,wires,tests/specs --overwrite
+
+      - name: Commit Format Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "👌 IMPROVE: Auto-format cfcs via cfformat"
