@@ -7,13 +7,18 @@ component extends="cbwire.models.Component" {
 
     // Data properties
     variables.data = {
-        "satelliteCount": 0
+        "satelliteCount": 0,
+        "planets": function(){
+            return planetService.getPlanets();
+        }
     };
 
-    // Data from injected services need to be placed within onDIComplete().
-    function onDIComplete(){
-        variables.data[ "planets" ] = planetService.getPlanets();
-    }
+    /*
+        // Calls to injected services can also be placed within onDIComplete().
+        function onDIComplete(){
+            variables.data[ "planets" ] = planetService.getPlanets();
+        }
+    */
 
     // Computed properties
     variables.computed = {
