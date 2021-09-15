@@ -45,6 +45,7 @@ component extends="cbwire.models.Component" {
         variables.data.satelliteCount = 0;
     }
 
+    // Rendering
     function renderIt(){
         return this.renderView( "wires/planetlist" );
     }
