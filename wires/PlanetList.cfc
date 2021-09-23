@@ -1,7 +1,7 @@
 /**
  * I am a cbwire component.
  */
-component extends="cbwire.models.Component" {
+component {
 
 	property name="planetService" inject="PlanetService";
 
