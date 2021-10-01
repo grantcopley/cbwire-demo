@@ -23,7 +23,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - uses: michaelborn/commandbox-action@v1
+      - uses: Ortus-Solutions/commandbox-action@v1
         with:
           cmd: cfformat run path=models,handlers,interceptors,wires,tests/specs --overwrite
 
