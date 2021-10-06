@@ -30,7 +30,7 @@
     },
     "dependencies":{
         "coldbox":"6.4.0",
-        "cbwire":"^1.0.0-beta"
+        "cbwire":"be"
     },
     "scripts":{},
     "testbox":{
