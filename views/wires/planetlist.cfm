@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            <cfloop array="#args.planetsWithSatellites( args.satelliteCount )#" index="planet">
+            <cfloop array="#args.planetsWithSatellites#" index="planet">
                 <div class="py-8 bg-white rounded-xl shadow-xl space-y-2 sm:py-4 flex" wire:key="#planet.title#">
                     <img class="block h-16 rounded-full mx-0 sm:flex-shrink-0" src="/includes/images/#planet.image#" alt="#planet.title#">
                     <div class="space-y-2 text-left">

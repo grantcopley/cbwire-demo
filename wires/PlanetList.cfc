@@ -6,48 +6,35 @@ component extends="cbwire.models.Component" {
 	property name="planetService" inject="PlanetService";
 
 	// Data properties
-	variables.data = {
+	data = {
 		"satelliteCount" : 0,
 		"planets"        : function() {
-			return variables.planetService.getPlanets();
+			return planetService.getPlanets();
 		}
 	};
-
-	/*
-        // Calls to injected services can also be placed within onDIComplete().
-        function onDIComplete(){
-            variables.data[ "planets" ] = planetService.getPlanets();
-        }
-    */
 
 	// Computed properties
 	variables.computed = {
 		"planetCount" : function() {
-			return arrayLen( variables.data.planets );
+			return arrayLen( data.planets );
 		},
-		"planetsWithSatellites" : function( satelliteCount ) {
-			return variables.data.planets.filter( function( planet ) {
-				return planet.satellites >= satelliteCount;
+		"planetsWithSatellites" : function( data ) {
+			return data.planets.filter( function( planet ) {
+				return planet.satellites >= data.satelliteCount;
 			} );
 		}
 	}
 
 	// Actions
 	function increaseSatellites() {
-		variables.data.satelliteCount += 1;
+		data.satelliteCount += 1;
 	}
 
 	function decreaseSatellites() {
-		variables.data.satelliteCount -= 1;
+		data.satelliteCount -= 1;
 	}
 
 	function reset() {
-		variables.data.satelliteCount = 0;
+		data.satelliteCount = 0;
 	}
-
-	// Rendering
-	function renderIt() {
-		return this.renderView( "wires/planetlist" );
-	}
-
 }
