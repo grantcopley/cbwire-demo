@@ -1,13 +1,13 @@
-# cbwire demo
+# CBWIRE Demo
 
-This is the [cbwire](https://cbwire.ortusbooks.com) demonstration app that was shown for [Into The Box 2021](https://intothebox.org/).
+Welcome to the [CBWIRE](https://cbwire.ortusbooks.com) demo app from my [ITB 2021](https://intothebox.org/) presentation. Please note that CBWIRE has significantly evolved since then, especially with its deep integration with AlpineJS, which is now included with CBWIRE. This example has been updated to work with CBWIRE 4 and changed to include integration with Alpine. - Grant
 
 ![alt text][logo]
 
-cbwire is a [ColdBox](https://coldbox.org/) module that makes building reactive, dynamic, and modern interfaces delightfully easy without leaving the comfort of CFML.
+CBWIRE is a [ColdBox](https://coldbox.org/) module that makes building reactive, dynamic, and modern interfaces delightfully easy without leaving the comfort of CFML.
 ## Core Files
 
-To see cbwire in action, see the following files.
+To see CBWIRE in action, see the following files.
 
 ```AsciiDoc
 // Layout
