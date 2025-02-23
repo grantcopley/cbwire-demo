@@ -7,23 +7,8 @@ component extends="cbwire.models.Component" {
 
 	// Data properties
 	data = {
-		"satelliteCount" : 0,
-		"planets"        : function() {
-			return planetService.getPlanets();
-		}
+		"satelliteCount" : 0
 	};
-
-	// Computed properties
-	variables.computed = {
-		"planetCount" : function() {
-			return arrayLen( data.planets );
-		},
-		"planetsWithSatellites" : function( data ) {
-			return data.planets.filter( function( planet ) {
-				return planet.satellites >= data.satelliteCount;
-			} );
-		}
-	}
 
 	// Actions
 	function increaseSatellites() {
@@ -36,5 +21,20 @@ component extends="cbwire.models.Component" {
 
 	function reset() {
 		data.satelliteCount = 0;
+	}
+
+	// Other methods
+	function planets() {
+		return planetService.getPlanets();
+	}
+
+	function planetCount() computed {
+		return arrayLen( planets() );
+	}
+
+	function planetsWithSatellites() computed {
+		return planets().filter( function( planet ) {
+			return planet.satellites >= data.satelliteCount;
+		} );
 	}
 }
